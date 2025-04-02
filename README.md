@@ -19,8 +19,8 @@ USE IN COMBINATION WITH WINDHAWK:
 ----------------------------------
 If you use ToolbarForWindows11 in combination with WindHawk and with the Modd "Taskbar on top for Windows 11", you need to make the Windows 11 taskbar move down a bit from the top of the screen so that the Toolbar can fit without overlapping each other. You do this by modifying the Modd "Taskbar on top for Windows 11" in the following places, in this case it is moved down 50 pixels (you can adjust this according to your own settings and taste):
 
-Line 505: windowpos->y = monitorRect.top;
-to: Y = monitorInfo.rcWork.top + 50;
+Line 505: windowpos->y = monitorRect.top; 
+to: windowpos->y = monitorRect.top + 50; 
 
 Line 679: rectNew.Y = monitorInfo.rcWork.top + MulDiv(12, monitorDpiY, 96);
 to: rectNew.Y = monitorInfo.rcWork.top + 50 + MulDiv(12, monitorDpiY, 96);
